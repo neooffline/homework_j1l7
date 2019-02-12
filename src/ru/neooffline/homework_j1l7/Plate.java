@@ -11,6 +11,9 @@ public class Plate {
     public void decreaseFood(int portion) {
         food -=portion;
     }
+    public int getFood(){
+        return food;
+    }
     public void increaseFood(int addactiveEat){
         food += addactiveEat;
     }

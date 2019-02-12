@@ -10,10 +10,15 @@ public class Cat {
         this.portion = portion;
     }
     protected void takePortion(Plate p){
-        p.decreaseFood(portion);
-        appetite -=portion;
+        if (p.getFood() >= portion){
+            p.decreaseFood(portion);
+            appetite -= portion;
+        } else {
+            System.out.println("В миске мало еды..." + name + " не будет есть");
+            isSatisfied();
+        }
     }
-    private boolean isSatisfied(){
-        return appetite==0;
+    protected boolean isSatisfied(){
+        return appetite == 0;
     }
 }

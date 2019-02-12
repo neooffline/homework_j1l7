@@ -7,7 +7,7 @@ public class Human {
         this.additiveEat = additiveEat;
         this.additiveWater = additiveWater;
     }
-    private void addEatToPlata(Plate p){
+    public void addEatToPlata(Plate p){
         p.increaseFood(additiveEat);
     }
 
