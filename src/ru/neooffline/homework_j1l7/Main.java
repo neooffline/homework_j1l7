@@ -7,11 +7,11 @@ public class Main {
 	 Cat cat1 = new Cat("SnowIce", 12,3);
 	 Cat cat2 = new Cat("FireStrike",7,2);
 	 Human human = new Human(4,3);
-	 plate.plateInfo();
-	 cat1.takePortion(plate);
-	 cat2.takePortion(plate);
+	 while (plate.getFood() > 0) {
+         cat1.takePortion(plate);
+         cat2.takePortion(plate);
+         plate.plateInfo();
 //	 human.addEatToPlata(plate);
-	 plate.plateInfo();
-	 cat1.takePortion(plate);
+     }
     }
 }
