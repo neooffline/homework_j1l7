@@ -8,13 +8,18 @@ public class Plate {
     public void plateInfo(){
         System.out.println("Еды в тарелке осталось - " + food);
     }
-    public void decreaseFood(int portion) {
-        food -=portion;
+    protected void decreaseFood(int appetite) {
+        if(!isLilFood(appetite) && (food-appetite) > 0 ){
+            food -=appetite;
+        }
     }
-    public int getFood(){
+    protected int getFood(){
         return food;
     }
-    public void increaseFood(int addactiveEat){
+    protected boolean isLilFood(int appetite){
+        return food<appetite;
+    }
+    protected void increaseFood(int addactiveEat){
         food += addactiveEat;
     }
 }
